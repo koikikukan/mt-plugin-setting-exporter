@@ -1,0 +1,25 @@
+id: SettingExporter
+name: SettingExporter
+author_link: http://www.koikikukan.com/
+author_name: Yujiro Araki
+plugin_link: http://github.com/koikikukan/mt-plugin-setting-exporter
+doc_link: http://www.koikikukan.com/archives/2010/08/09-015555.php
+description: <__trans phrase="SettingExporter.">
+version: 0.01
+l10n_lexicon:
+    ja:
+        SettingExporter.: ウェブサイト・ブログの設定をテーマにエクスポートします
+        Default Settings: ウェブサイト・ブログの設定
+        Item: 項目
+        Content: 内容
+        mixicomment: ミクシィ
+theme_element_handlers:
+    plugin_default_settings:
+        label: Default Settings
+        importer:
+            import: $SettingExporter::SettingExporter::Theme::apply
+            info: $SettingExporter::SettingExporter::Theme::info
+        exporter:
+            params: plugin_default_settings_export_ids
+            template: $SettingExporter::SettingExporter::Theme::template
+            export: $SettingExporter::SettingExporter::Theme::export

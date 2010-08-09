@@ -1,0 +1,752 @@
+<style type="text/css">
+.setting-group-content {
+    display: none;
+}
+.setting-group-content.active {
+    display: block;
+}
+.setting-group-header h3 a {
+    color: #2B2B2B;
+}
+.setting-group-header h3 {
+    font-size: 14px;
+    text-shadow: none;
+}
+.setting-group-header {
+    position: relative;
+}
+.setting-group {
+    margin-bottom: 10px;
+    position: relative;
+}
+</style>
+
+<mt:ignore>General</mt:ignore>
+
+<div id="setting-group-pref" class="setting-group">
+    <div id="setting-group-pref-header" class="setting-group-header">
+        <h3><a href="javascript:void(0);" onclick="return toggleActive('setting-group-pref-content');"><__trans phrase="General"></a></h3>
+    </div>
+    <div class="setting-group-content" id="setting-group-pref-content">
+
+
+<div id="settings" class="listing  hide_actions">
+    <table id="settings-table" class="settings-table compact" cellspacing="0">
+
+<thead>
+    <tr>
+        <th class="cb"><input type="checkbox" name="id-head" value="all" class="select" /></th>
+        <th class="field-name primary-col"><__trans phrase="Item"></th>
+        <th class="field-name primary-col"><__trans phrase="Content"></th>
+    </tr>
+</thead>
+<tbody>
+
+
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="name">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Name"></td>
+        <td class="field-name"><mt:var name="name_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="description">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Description"></td>
+        <td class="field-name"><mt:var name="description_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="server_offset">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Time Zone"></td>
+        <td class="field-name"><mt:var name="server_offset_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="cc_license">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="License"></td>
+        <td class="field-name"><mt:var name="cc_license_content"></td>
+    </tr>
+
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="site_url">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Site URL"></td>
+        <td class="field-name"><mt:var name="site_url_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="site_path">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Site Path"></td>
+        <td class="field-name"><mt:var name="site_path_content"></td>
+    </tr>
+<mt:if name="is_blog">
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="archive_url">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Archive URL"></td>
+        <td class="field-name"><mt:var name="archive_url_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="archive_path">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Archive Path"></td>
+        <td class="field-name"><mt:var name="archive_path_content"></td>
+    </tr>
+</mt:if>
+
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="file_extension">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="File Extension"></td>
+        <td class="field-name"><mt:var name="file_extension_content"></td>
+    </tr>
+
+<mt:if name="is_blog">
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="archive_type_preferred">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Preferred Archive"></td>
+        <td class="field-name"><mt:var name="archive_type_preferred_content"></td>
+    </tr>
+</mt:if>
+
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="use_revision">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Revision history"></td>
+        <td class="field-name"><mt:var name="use_revision_content"></td>
+    </tr>
+<mt:ignore>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="max_revisions_entry">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Number of revisions per entry/page"></td>
+        <td class="field-name"><mt:var name="max_revisions_entry_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="max_revisions_template">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Number of revisions per template"></td>
+        <td class="field-name"><mt:var name="max_revisions_template_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="is_dynamic">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Dynamic Publishing Options"></td>
+        <td class="field-name"><mt:var name="is_dynamic_content"></td>
+    </tr>
+</mt:ignore>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+
+<mt:ignore>Compose</mt:ignore>
+
+<div id="setting-group-entry" class="setting-group">
+    <div id="setting-group-entry-header" class="setting-group-header">
+        <h3><a href="javascript:void(0);" onclick="return toggleActive('setting-group-entry-content');"><__trans phrase="Compose"></a></h3>
+    </div>
+    <div class="setting-group-content" id="setting-group-entry-content">
+
+<div id="settings" class="listing  hide_actions">
+    <table id="settings-table" class="settings-table compact" cellspacing="0">
+
+<thead>
+    <tr>
+        <th class="cb"><input type="checkbox" name="id-head" value="all" class="select" /></th>
+        <th class="field-name primary-col"><__trans phrase="Item"></th>
+        <th class="field-name primary-col"><__trans phrase="Content"></th>
+    </tr>
+</thead>
+<tbody>
+
+<mt:if name="days_on_index_content">
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="days_on_index">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Listing Default">(<__trans phrase="Days">)</td>
+        <td class="field-name"><mt:var name="days_on_index_content"></td>
+    </tr>
+</mt:if>
+<mt:if name="entries_on_index_content">
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="entries_on_index">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Listing Default">(<__trans phrase="Posts">)</td>
+        <td class="field-name"><mt:var name="entries_on_index_content"></td>
+    </tr>
+</mt:if>
+
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="sort_order_posts">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Order"></td>
+        <td class="field-name"><mt:var name="sort_order_posts_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="words_in_excerpt">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Excerpt Length"></td>
+        <td class="field-name"><mt:var name="words_in_excerpt_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="language">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Date Language"></td>
+        <td class="field-name"><mt:var name="language_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="basename_limit">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Basename Length"></td>
+        <td class="field-name"><mt:var name="basename_limit_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="status_default">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Status"></td>
+        <td class="field-name"><mt:var name="status_default_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="convert_paras">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Text Formatting"></td>
+        <td class="field-name"><mt:var name="convert_paras_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="allow_comments_default">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Accept Comments"></td>
+        <td class="field-name"><mt:var name="allow_comments_default_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="allow_pings_default">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Accept TrackBacks"></td>
+        <td class="field-name"><mt:var name="allow_pings_default_content"></td>
+    </tr>
+
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+
+
+<mt:ignore>Feedback</mt:ignore>
+
+<div id="setting-group-feedback" class="setting-group">
+    <div id="setting-group-feedback-header" class="setting-group-header">
+        <h3><a href="javascript:void(0);" onclick="return toggleActive('setting-group-feedback-content');"><__trans phrase="Feedback"></a></h3>
+    </div>
+    <div class="setting-group-content" id="setting-group-feedback-content">
+
+
+<div id="settings" class="listing  hide_actions">
+    <table id="settings-table" class="settings-table compact" cellspacing="0">
+
+<thead>
+    <tr>
+        <th class="cb"><input type="checkbox" name="id-head" value="all" class="select" /></th>
+        <th class="field-name primary-col"><__trans phrase="Item"></th>
+        <th class="field-name primary-col"><__trans phrase="Content"></th>
+    </tr>
+</thead>
+<tbody>
+
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="junk_folder_expiry">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Delete Spam After">(<__trans phrase="Automatic Deletion">)</td>
+        <td class="field-name"><mt:var name="junk_folder_expiry_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="junk_score_threshold">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Spam Score Threshold"></td>
+        <td class="field-name"><mt:var name="junk_score_threshold_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="nofollow_urls">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Apply 'nofollow' to URLs"></td>
+        <td class="field-name"><mt:var name="nofollow_urls_content"></td>
+    </tr>
+<!--<mt:if name="nofollow_urls_content">-->
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="follow_auth_links">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="'nofollow' exception for trusted commenters"></td>
+        <td class="field-name"><mt:var name="follow_auth_links_content"></td>
+    </tr>
+<!--</mt:if>-->
+
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="allow_reg_comments">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Accept Comments"></td>
+        <td class="field-name"><mt:var name="allow_reg_comments_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="moderate_unreg_comments">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Immediately approve comments from"></td>
+        <td class="field-name"><mt:var name="moderate_unreg_comments_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="allow_comment_html">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Allow HTML"></td>
+        <td class="field-name"><mt:var name="allow_comment_html_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="sanitize_spec">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Limit HTML Tags"></td>
+        <td class="field-name"><mt:var name="sanitize_spec_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="email_new_comments">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="E-mail Notification"></td>
+        <td class="field-name"><mt:var name="email_new_comments_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="sort_order_comments">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Comment Order"></td>
+        <td class="field-name"><mt:var name="sort_order_comments_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="autolink_urls">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Auto-Link URLs"></td>
+        <td class="field-name"><mt:var name="autolink_urls_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="convert_paras_comments">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Text Formatting"></td>
+        <td class="field-name"><mt:var name="convert_paras_comments_content"></td>
+    </tr>
+<mt:ignore>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="captcha_provider">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="CAPTCHA Provider"></td>
+        <td class="field-name"><mt:var name="captcha_provider_content"></td>
+    </tr>
+</mt:ignore>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="use_comment_confirmation">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Use Comment Confirmation Page"></td>
+        <td class="field-name"><mt:var name="use_comment_confirmation_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="allow_pings">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Accept TrackBacks"></td>
+        <td class="field-name"><mt:var name="allow_pings_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="moderate_pings">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Moderation"></td>
+        <td class="field-name"><mt:var name="moderate_pings_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="email_new_pings">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="E-mail Notification"></td>
+        <td class="field-name"><mt:var name="email_new_pings_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="autodiscover_links">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Enable External TrackBack Auto-Discovery"></td>
+        <td class="field-name"><mt:var name="autodiscover_links_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="internal_autodiscovery">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Enable Internal TrackBack Auto-Discovery"></td>
+        <td class="field-name"><mt:var name="internal_autodiscovery_content"></td>
+    </tr>
+
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+
+
+<mt:ignore>Registration</mt:ignore>
+
+<div id="setting-group-registration" class="setting-group">
+    <div id="setting-group-registration-header" class="setting-group-header">
+        <h3><a href="javascript:void(0);" onclick="return toggleActive('setting-group-registration-content');"><__trans phrase="Registration"></a></h3>
+    </div>
+    <div class="setting-group-content" id="setting-group-registration-content">
+
+
+<div id="settings" class="listing  hide_actions">
+    <table id="settings-table" class="settings-table compact" cellspacing="0">
+
+<thead>
+    <tr>
+        <th class="cb"><input type="checkbox" name="id-head" value="all" class="select" /></th>
+        <th class="field-name primary-col"><__trans phrase="Item"></th>
+        <th class="field-name primary-col"><__trans phrase="Content"></th>
+    </tr>
+</thead>
+<tbody>
+
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="allow_commenter_regist">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="User Registration"></td>
+        <td class="field-name"><mt:var name="allow_commenter_regist_content"></td>
+    </tr>
+
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="allow_unreg_comments">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Allow comments from anonymous or unauthenticated users."></td>
+        <td class="field-name"><mt:var name="allow_unreg_comments_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="require_comment_emails">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Require name and E-mail Address for Anonymous Comments"></td>
+        <td class="field-name"><mt:var name="require_comment_emails_content"></td>
+    </tr>
+
+<!--
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="enabled_MovableType">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Movable Type"></td>
+        <td class="field-name"><mt:var name="enabled_MovableType_content"></td>
+    </tr>
+
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="enabled_OpenID">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="OpenID"></td>
+        <td class="field-name"><mt:var name="enabled_OpenID_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="enabled_LiveJournal">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="LiveJournal"></td>
+        <td class="field-name"><mt:var name="enabled_LiveJournal_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="enabled_Vox">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Vox"></td>
+        <td class="field-name"><mt:var name="enabled_Vox_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="enabled_Google">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Google"></td>
+        <td class="field-name"><mt:var name="enabled_Google_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="enabled_Yahoo">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Yahoo"></td>
+        <td class="field-name"><mt:var name="enabled_Yahoo_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="enabled_AIM">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="AIM"></td>
+        <td class="field-name"><mt:var name="enabled_AIM_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="enabled_WordPress">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="WordPress"></td>
+        <td class="field-name"><mt:var name="enabled_WordPress_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="enabled_YahooJP">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="YahooJP"></td>
+        <td class="field-name"><mt:var name="enabled_YahooJP_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="enabled_livedoor">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="livedoor"></td>
+        <td class="field-name"><mt:var name="enabled_livedoor_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="enabled_Hatena">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Hatena"></td>
+        <td class="field-name"><mt:var name="enabled_Hatena_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="enabled_mixicomment">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="mixicomment"></td>
+        <td class="field-name"><mt:var name="enabled_mixicomment_content"></td>
+    </tr>
+-->
+
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+
+
+<mt:ignore>Web Services</mt:ignore>
+
+<div id="setting-group-services" class="setting-group">
+    <div id="setting-group-services-header" class="setting-group-header">
+        <h3><a href="javascript:void(0);" onclick="return toggleActive('setting-group-services-content');"><__trans phrase="Web Services"></a></h3>
+    </div>
+    <div class="setting-group-content" id="setting-group-services-content">
+
+
+<div id="settings" class="listing  hide_actions">
+    <table id="settings-table" class="settings-table compact" cellspacing="0">
+
+<thead>
+    <tr>
+        <th class="cb"><input type="checkbox" name="id-head" value="all" class="select" /></th>
+        <th class="field-name primary-col"><__trans phrase="Item"></th>
+        <th class="field-name primary-col"><__trans phrase="Content"></th>
+    </tr>
+</thead>
+<tbody>
+
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="remote_auth_token">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="TypePad token:"></td>
+        <td class="field-name"><mt:var name="remote_auth_token_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="ping_google">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="google.com"></td>
+        <td class="field-name"><mt:var name="ping_google_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="ping_weblogs">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="weblogs.com"></td>
+        <td class="field-name"><mt:var name="ping_weblogs_content"></td>
+    </tr>
+    <tr class="even">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="ping_others">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Others:"></td>
+        <td class="field-name"><mt:var name="ping_others_content"></td>
+    </tr>
+    <tr class="odd">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="mt_update_key">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Recently Updated Key"></td>
+        <td class="field-name"><mt:var name="mt_update_key_content"></td>
+    </tr>
+
+        </tbody>
+    </table>
+</div>
+</div>
+</div>
+
+
+
+<mt:ignore>
+
+moderate_unreg_comments
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="allow_reg_comments">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="allow_reg_comments_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="manual_approve_commenters">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="manual_approve_commenters_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="allow_anon_comments">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="allow_anon_comments_content"></td>
+    </tr>
+</mt:ignore>
+
+<mt:ignore>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="welcome_msg">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="welcome_msg_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="ping_blogs">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="ping_blogs_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="ping_weblogs">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="ping_weblogs_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="archive_tmpl_monthly">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="archive_tmpl_monthly_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="archive_tmpl_weekly">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="archive_tmpl_weekly_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="archive_tmpl_daily">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="archive_tmpl_daily_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="archive_tmpl_individual">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="archive_tmpl_individual_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="archive_tmpl_category">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="archive_tmpl_category_content"></td>
+    </tr>
+
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="old_style_archive_links">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="old_style_archive_links_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="custom_dynamic_templates">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="custom_dynamic_templates_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="archive_type">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase="Preferred Archive"></td>
+        <td class="field-name"><mt:var name="archive_type_content"></td>
+    </tr>
+    <tr class="">
+        <td class="cb">
+            <input type="checkbox" name="plugin_default_settings_export_ids" class="select" value="<mt:var name="google_api_key">" <mt:if checked>checked="checked" </mt:if>/>
+        </td>
+        <td class="field-name"><__trans phrase=""></td>
+        <td class="field-name"><mt:var name="google_api_key_content"></td>
+    </tr>
+</mt:ignore>
+
+
+
+<script type="text/javascript">
+jQuery.mtCheckbox();
+</script>
